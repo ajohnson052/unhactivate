@@ -7,10 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <header>
+
+    <h1>Unhactivate</h1>
+
+    <nav>
+      <ul>
+        <li><a href="/breaches">Breaches</a></li>
+        <li><a href="/educate">Educate</a></li>
+      </ul>
+    </nav>
+
+    <div class="log-in-bar">
+      <p>login form goes here</p>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+  </header>
 
 <%= yield %>
+
+  <footer>
+    <ul>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/support">Support</a></li>
+      <li><a href="/legal">Legal</a></li>
+    </ul>
+  </footer>
 
 </body>
 </html>

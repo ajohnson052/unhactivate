@@ -1,0 +1,40 @@
+<h2>Listing breaches</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Breach Name</th>
+      <th>Breach date</th>
+      <th>Description</th>
+      <!-- <th></th>
+      <th></th>
+      <th></th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @breaches.each do |breach| %>
+      <tr>
+        <td>
+          <%= link_to breach.title, breach %>
+        </td>
+        <td>
+          <%= link_to breach.breach_date, breach %>
+        </td>
+        <td>
+          <%= breach.description %>
+        </td>
+        <td>
+          <%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %>
+        </td>
+        <!-- <td>
+          <%= link_to 'Show', breach %>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_breach_path(breach) %>
+        </td>
+        <td>
+          <%= link_to 'Destroy', breach, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+        </td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

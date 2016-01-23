@@ -5,9 +5,6 @@
       <th>Breach Name</th>
       <th>Breach date</th>
       <th>Description</th>
-      <!-- <th></th>
-      <th></th>
-      <th></th> -->
     </tr>
   </thead>
   <tbody>
@@ -25,15 +22,6 @@
         <td>
           <%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %>
         </td>
-        <!-- <td>
-          <%= link_to 'Show', breach %>
-        </td>
-        <td>
-          <%= link_to 'Edit', edit_breach_path(breach) %>
-        </td>
-        <td>
-          <%= link_to 'Destroy', breach, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
-        </td> -->
       </tr>
     <% end %>
   </tbody>

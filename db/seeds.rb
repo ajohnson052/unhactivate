@@ -9,13 +9,16 @@
 file_name = File.expand_path(File.join(File.dirname(__FILE__), 'breach_data.json'))
 breach_data = JSON.parse(File.read(file_name))
 
+# Uncomment these to wipe out old data in the database
+# Category.delete_all
+# Organization.delete_all
+# Breach.delete_all
+
 (1..7).each do |i| # generate 7 generic numbered categories
    Category.create(title: "Category#{i}")
 end
 
 last_category = 0
-
-# cat = Category.create(title: "everything")
 
 breach_data.each do |breach|
 
@@ -41,25 +44,3 @@ breach_data.each do |breach|
   )
 
 end
-
-# schema
-# create_table "breaches", force: :cascade do |t|
-#   t.string   "title"
-#   t.date     "breach_date"
-#   t.text     "description"
-#   t.datetime "created_at",  null: false
-#   t.datetime "updated_at",  null: false
-# end
-#
-# create_table "categories", force: :cascade do |t|
-#   t.string   "title"
-#   t.datetime "created_at", null: false
-#   t.datetime "updated_at", null: false
-# end
-#
-# create_table "organizations", force: :cascade do |t|
-#   t.string   "name"
-#   t.string   "domain"
-#   t.datetime "created_at", null: false
-#   t.datetime "updated_at", null: false
-# end

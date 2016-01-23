@@ -1,8 +1,7 @@
 class UserMailer < ApplicationMailer
-  default from: 'unhactivate@gmail.com'
 
-  def welcome_email(user)
+  def order_ahead_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+    mail to: @user.email, subject: 'Welcome'
   end
 end

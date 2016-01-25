@@ -4,6 +4,7 @@ class CreateBreaches < ActiveRecord::Migration
       t.string :title
       t.date :breach_date
       t.text :description
+      t.references :organization, index: true, foreign_key: true
 
       t.timestamps null: false
     end

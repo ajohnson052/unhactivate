@@ -1,0 +1,31 @@
+<h2>Listing organizations</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Domain</th>
+      <th>Category</th>
+      <th>Breaches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orgs.each do |org| %>
+      <tr>
+        <td>
+          <%= org.name %>
+        </td>
+        <td>
+          <%= org.domain %>
+        </td>
+        <td>
+          <%= org.category.title %>
+        </td>
+        <td>
+          <% org.breaches.each do |breach| %>
+            <%= link_to breach.title, breach %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

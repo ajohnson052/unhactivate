@@ -1,0 +1,17 @@
+
+<h3><%= @org.name %></h3>
+<p>
+  <b>Domain:</b>
+  <%= @org.domain %>
+</p>
+<p>
+  <b>Category:</b>
+  <%= @org.category.title %>
+</p>
+<p>
+  <b>Breaches:</b>
+  <% @org.breaches.each do |breach| %>
+    <%= link_to breach.title, breach %>
+  <% end %>
+</p>
+<%= link_to 'Back', organizations_path %>

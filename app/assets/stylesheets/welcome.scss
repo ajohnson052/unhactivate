@@ -7,3 +7,24 @@ li {
   display: inline;
   padding-left: 1em;
 }
+
+.terms {
+  background: lemonchiffon;
+  display: none;
+  position: fixed;
+  top: 25%;
+  height: 50vh;
+  margin: 0 auto;
+  width: 50%;
+  overflow: scroll;
+  left: 0;
+  right: 0;
+}
+
+.terms-link {
+  text-decoration: underline;
+}
+
+.close-terms {
+  float: right;
+}

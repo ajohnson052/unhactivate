@@ -12,19 +12,22 @@ li {
   background: lemonchiffon;
   display: none;
   position: fixed;
-  top: 25%;
-  height: 50vh;
+  top: 20%;
+  height: 50%;
   margin: 0 auto;
   width: 50%;
   overflow: scroll;
   left: 0;
   right: 0;
+  padding: 2rem;
 }
 
 .terms-link {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .close-terms {
   float: right;
+  cursor: pointer;
 }

@@ -6,5 +6,4 @@ class WelcomeController < ApplicationController
     @user = User.new(params[:user])
     UserMailer.welcome_user(@user).deliver_now
   end
-
 end

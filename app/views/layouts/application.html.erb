@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Unhactivate</title>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -47,7 +48,19 @@
     </nav> -->
 
     <div class="log-in-bar">
-      <p>login form goes here</p>
+      <% if current_user %>
+        <%= current_user.email %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= form_for(:user, url: session_path(:user)) do |f| %>
+          <%= f.text_field :email, placeholder: "Email"%>
+          <%= f.password_field :password, placeholder: "Password" %>
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+          <%= f.submit 'Sign in' %>
+          <%= link_to "Forgot your password?", new_password_path(:user) %>
+        <% end %>
+      <% end %>
     </div>
 
     <p class="notice"><%= notice %></p>

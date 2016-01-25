@@ -34,7 +34,23 @@
             <li><a href="/educate">Educate</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">log in goes here</a></li>
+            <li>
+              <div class="log-in-bar">
+                <% if current_user %>
+                  <%= current_user.email %>
+                  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+                <% else %>
+                  <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form"}) do |f| %>
+                    <%= f.text_field :email, placeholder: "Email"%>
+                    <%= f.password_field :password, placeholder: "Password" %>
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                    <%= f.submit 'Log in', html: {class: "btn btn-default"} %>
+                    <!-- <%= link_to "Forgot your password?", new_password_path(:user) %> -->
+                  <% end %>
+                <% end %>
+              </div>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -47,21 +63,7 @@
       </ul>
     </nav> -->
 
-    <div class="log-in-bar">
-      <% if current_user %>
-        <%= current_user.email %>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= form_for(:user, url: session_path(:user)) do |f| %>
-          <%= f.text_field :email, placeholder: "Email"%>
-          <%= f.password_field :password, placeholder: "Password" %>
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-          <%= f.submit 'Sign in' %>
-          <%= link_to "Forgot your password?", new_password_path(:user) %>
-        <% end %>
-      <% end %>
-    </div>
+
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :breaches
   resources :organizations # we may not need this
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: "registrations"}
+
   root to: "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

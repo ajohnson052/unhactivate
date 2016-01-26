@@ -1,6 +1,11 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :configure_permitted_parameters
 
+  def after_sign_up_path_for(resource)
+    '/select_categories'
+    # after_sign_in_path_for(resource)
+  end
+
   def create
     build_resource(sign_up_params)
 

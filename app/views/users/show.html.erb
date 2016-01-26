@@ -1,0 +1,4 @@
+<h2>Hello <%= current_user.email %> </h2>
+<% current_user.organizations.each do |org|%>
+  <%= org.name %>
+<% end %>

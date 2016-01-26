@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
+
+  get "/select_categories" => "users#select_categories"
+
+  resources :breaches
+  resources :organizations # we may not need this
+
   devise_for :users, controllers: {registrations: "registrations"}
+  resources :users, only: [:show] do
+    member do
+      get 'select_categories'
+      get 'select_organizations'
+      post 'interests'
+    end
+  end
+
   root to: "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,74 +1,55 @@
 <main>
 
-<h2>Welcome#index</h2>
+  <row>
 
-<p><em>Find me in app/views/welcome/index.html.erb</em></p>
+    <div class="col-md-6">
 
-  <div>
-    <h2>Monitor Breaches That Might Affect You</h2>
-    <p>search bar goes here</p>
-  </div>
+      <div>
+        <h2>Monitor Breaches That Might Affect You</h2>
 
-  <div>
-    <h2>Recent Breaches</h2>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for breaches">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Doesn't Work</button>
+          </span>
+        </div><!-- /input-group -->
 
-  </div>
+      </div>
 
-  <div>
-    <h2>Sign Up Today</h2>
-    <p>Get notified the moment a breach has occured.</p>
-    <p><%= resource_name %></p>
-    <div class = "sign-up">
-      <h2>Sign up</h2>
+      <div>
+        <h2>Recent Breaches</h2>
 
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+        <% @recent_breaches.each do |breach| %>
+          <h3>
+            <%= link_to breach.title + ', ' + breach.breach_date.strftime, breach %>
+          </h3>
+          <p><%= breach.description %></p>
+          <p><%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %></p>
+        <% end %>
 
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
+      </div>
 
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off" %>
-        </div>
-
-        <div class="field">
-          I agree to the <span class="terms-link">Terms and Conditions</span><br />
-          <%= f.check_box :terms %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit "Sign up" %>
-        </div>
-      <% end %>
     </div>
-    <div class="terms">
-      <div class="close-terms">[X]</div>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+    <div class="col-md-6">
+
+      <%= render partial: "devise/registrations/signup" if not current_user %>
+
+        <div>
+          <h2>Learn How to Protect Your Information</h2>
+
+          <h3>Article Text</h3>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+          <h3>Another Article</h3>
+
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+
+        </div>
+
     </div>
-  </div>
 
-  <div>
-    <h2>Learn How to Protect Your Information</h2>
-
-    <h3>Article Text</h3>
-
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-    <h3>Another Article</h3>
-
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-
-  </div>
+  </row>
 
 </main>

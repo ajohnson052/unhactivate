@@ -1,0 +1,11 @@
+<%= form_tag("/users/#{current_user.id}/interests", method: "post") do %>
+  <% @interests.each do |interest| %>
+    <h2><%= interest.title %></h2>
+    <% interest.organizations.each do |org| %>
+      <% name = org.name %>
+      <%= label_tag(name, name) %>
+      <%= check_box_tag(name) %>
+    <% end %>
+  <% end %>
+<%= submit_tag("Next") %>
+<% end %>

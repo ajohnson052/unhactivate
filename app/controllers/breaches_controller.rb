@@ -18,6 +18,7 @@ class BreachesController < ApplicationController
       if @breach.save
         format.html { redirect_to @breach, notice: 'Breach was successfully created.' }
         format.json { render :show, status: :created, location: @breach }
+        @breach.notify
       else
         format.html { render :new }
         format.json { render json: @breach.errors, status: :unprocessable_entity }

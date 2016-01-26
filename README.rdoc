@@ -1,28 +1,29 @@
-== README
+## Synopsis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Unhactivate is a website for tracking security breaches and notifying users. Users are able to choose organizations that they would like to watch, and they will receive email notifications if Unhactivate hears about a breach at that organization.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Open PostgreSQL if it is not already running on your machine. If you have never downloaded Postgres, installation instructions can be found at http://www.postgresql.org/.
 
-* System dependencies
+Run the following from the command line:
 
-* Configuration
+```
+$ bundle
+$ rake db:create
+$ rake db:migrate
+$ rake db:seed
+$ rails s
+```
 
-* Database creation
+The rails server is set up to run from port 3000 in the development environment.
 
-* Database initialization
+## API Reference
 
-* How to run the test suite
+The initial seed file was created from the API at https://haveibeenpwned.com/API/v2.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributors
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ajohnson052
+mooniker
+KoryJCampbell

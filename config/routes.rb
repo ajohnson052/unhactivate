@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   get "/select_categories" => "users#select_categories"
 
   resources :breaches

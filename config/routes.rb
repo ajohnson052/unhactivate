@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'organizations/index'
-
-  get 'breaches/index'
 
   resources :breaches
   resources :organizations # we may not need this

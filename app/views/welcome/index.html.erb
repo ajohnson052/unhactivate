@@ -32,7 +32,8 @@
     </div>
 
     <div class="col-md-6">
-      <%= render partial: "devise/registrations/signup" %>
+
+      <%= render partial: "devise/registrations/signup" if not current_user %>
 
         <div>
           <h2>Learn How to Protect Your Information</h2>

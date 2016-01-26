@@ -19,20 +19,21 @@
       <div>
         <h2>Recent Breaches</h2>
 
-        <h3>BankThatEveryoneUses.com</h3>
-
-        <p>Moses! totally hacked! what a catastrophe! Who could have thought that would happen?</p>
-
-        <h3>SketchySite.com</h3>
-
-        <p>Yeah, no surprise here. Can't beleive anyone uses that. pwned.</p>
+        <% @recent_breaches.each do |breach| %>
+          <h3>
+            <%= link_to breach.title + ', ' + breach.breach_date.strftime, breach %>
+          </h3>
+          <p><%= breach.description %></p>
+          <p><%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %></p>
+        <% end %>
 
       </div>
 
     </div>
 
     <div class="col-md-6">
-      <%= render partial: "devise/registrations/signup" %>
+
+      <%= render partial: "devise/registrations/signup" if not current_user %>
 
         <div>
           <h2>Learn How to Protect Your Information</h2>

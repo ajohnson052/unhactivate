@@ -1,0 +1,35 @@
+<%= form_for @breach do |f| %>
+  <% if @breach.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@breach.errors.count, "error")} prohibited this breach from being saved:" %>
+      </h2>
+      <ul>
+        <% @breach.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :breach_date %>
+    <%= f.date_select :breach_date %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :organization %>
+    <%= f.collection_select(:organization_id, @orgs, :id, :name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>

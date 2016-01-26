@@ -4,7 +4,7 @@ Unhactivate is a website for tracking security breaches and notifying users. Use
 
 ## Installation
 
-Open PostgreSQL if it is not already running on your machine. If you have never downloaded Postgres, installation instructions can be found at http://www.postgresql.org/.
+Open PostgreSQL if it is not already running on your machine. If you have never downloaded Postgres, installation instructions can be found [here](http://www.postgresql.org/).
 
 Run the following from the command line:
 
@@ -20,10 +20,10 @@ The rails server is set up to run from port 3000 in the development environment.
 
 ## API Reference
 
-The initial seed file was created from the API at https://haveibeenpwned.com/API/v2.
+The initial seed file was created from the [Have I been pwned? API](https://haveibeenpwned.com/API/v2).
 
 ## Contributors
 
-[mooniker](https://github.com/mooniker)
-[KoryJCampbell](https://github.com/KoryJCampbell)
-[ajohnson052](https://github.com/ajohnson052)
+* [mooniker](https://github.com/mooniker)
+* [KoryJCampbell](https://github.com/KoryJCampbell)
+* [ajohnson052](https://github.com/ajohnson052)

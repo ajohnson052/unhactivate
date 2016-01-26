@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'breaches/new'
-
-  get 'breaches/create'
-
-  get 'breaches/new'
-
-  get 'breaches/create'
-
-  get 'breaches/new'
-
-  get 'breaches/create'
-
   devise_for :admins
   get "/select_categories" => "users#select_categories"
 

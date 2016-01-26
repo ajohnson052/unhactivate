@@ -49,6 +49,6 @@ class BreachesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def breach_params
-    params.require(:breach).permit(:title, :breach_date, :description)
+    params.require(:breach).permit(:title, :breach_date, :description, :organization_id)
   end
 end

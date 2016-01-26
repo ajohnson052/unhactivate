@@ -24,6 +24,6 @@ The initial seed file was created from the API at https://haveibeenpwned.com/API
 
 ## Contributors
 
-ajohnson052
-mooniker
-KoryJCampbell
+[mooniker](https://github.com/mooniker)
+[KoryJCampbell](https://github.com/KoryJCampbell)
+[ajohnson052](https://github.com/ajohnson052)

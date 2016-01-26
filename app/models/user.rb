@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
 
   validates :terms, acceptance: true
 
+  devise :confirmable, allow_unconfirmed_access_for: 2.hours
+
 end

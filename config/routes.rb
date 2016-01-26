@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/select_categories" => "users#select_categories"
+
   resources :breaches
   resources :organizations # we may not need this
 

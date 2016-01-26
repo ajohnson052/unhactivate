@@ -29,9 +29,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Unhactivate <span class="sr-only">(current)</span></a></li>
-            <li><a href="/breaches">Breaches</a></li>
-            <li><a href="/educate">Educate</a></li>
+            <%= nav_li "Unhactivate", root_path %></li>
+            <%= nav_li "Breaches", breaches_path %>
+            <%= nav_li "Educate", "/educate" %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>

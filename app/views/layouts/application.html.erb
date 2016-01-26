@@ -11,30 +11,59 @@
 
   <header>
 
-    <h1>Unhactivate</h1>
+    <!-- <h1>Unhactivate</h1> -->
 
-    <nav>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img alt="logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Unhactivate <span class="sr-only">(current)</span></a></li>
+            <li><a href="/breaches">Breaches</a></li>
+            <li><a href="/educate">Educate</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <div class="log-in-bar">
+                <% if current_user %>
+                  <%= current_user.email %>
+                  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+                <% else %>
+                  <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form"}) do |f| %>
+                    <%= f.text_field :email, placeholder: "Email"%>
+                    <%= f.password_field :password, placeholder: "Password" %>
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                    <%= f.submit 'Log in', html: {class: "btn btn-default"} %>
+                    <!-- <%= link_to "Forgot your password?", new_password_path(:user) %> -->
+                  <% end %>
+                <% end %>
+              </div>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- <nav class="navbar navbar-default">
       <ul>
         <li><a href="/breaches">Breaches</a></li>
         <li><a href="/educate">Educate</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
-    <div class="log-in-bar">
-      <% if current_user %>
-        <%= current_user.email %>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= form_for(:user, url: session_path(:user)) do |f| %>
-          <%= f.text_field :email, placeholder: "Email"%>
-          <%= f.password_field :password, placeholder: "Password" %>
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-          <%= f.submit 'Sign in' %>
-          <%= link_to "Forgot your password?", new_password_path(:user) %>
-        <% end %>
-      <% end %>
-    </div>
+
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

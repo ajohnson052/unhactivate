@@ -3,10 +3,19 @@ Rails.application.routes.draw do
 
   get 'breaches/index'
 
+  get 'categories/index'
+
+  get 'interests/index'
+
   resources :breaches
   resources :organizations # we may not need this
 
   devise_for :users, controllers: {registrations: "registrations"}
+  resources :users, only: [:show] do
+    member do
+      post 'interests'
+    end
+  end
 
   root to: "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.

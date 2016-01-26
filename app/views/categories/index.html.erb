@@ -1,0 +1,8 @@
+<%= form_tag("/interests/index", method: "get") do %>
+  <% @categories.each do |category| %>
+    <% title = category.title %>
+    <%= label_tag(title, title) %>
+    <%= check_box_tag(title) %>
+  <% end %>
+  <%= submit_tag("Next") %>
+<% end %>

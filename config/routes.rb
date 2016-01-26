@@ -3,16 +3,14 @@ Rails.application.routes.draw do
 
   get 'breaches/index'
 
-  get 'categories/index'
-
-  get 'interests/index'
-
   resources :breaches
   resources :organizations # we may not need this
 
   devise_for :users, controllers: {registrations: "registrations"}
   resources :users, only: [:show] do
     member do
+      get 'select_categories'
+      get 'select_organizations'
       post 'interests'
     end
   end

@@ -13,4 +13,18 @@ class UsersController < ApplicationController
   def show
   end
 
+  def select_categories
+    @categories = Category.all
+  end
+
+  def select_organizations
+    categories = Category.all
+    @interests = []
+    categories.each do |category|
+      if params[category.title] then
+        @interests.push(category)
+      end
+    end
+  end
+
 end

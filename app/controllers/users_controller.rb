@@ -7,10 +7,12 @@ class UsersController < ApplicationController
         current_user.organizations.push(org)
       end
     end
-    render 'show'
+    redirect_to user_path(current_user)
   end
 
   def show
+    @breaches = current_user.breaches.order(breach_date: :desc)
+    @categories = Category.all
   end
 
   def select_categories

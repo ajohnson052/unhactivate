@@ -20,11 +20,7 @@
         <h2>Recent Breaches</h2>
 
         <% @recent_breaches.each do |breach| %>
-          <h3>
-            <%= link_to breach.title + ', ' + breach.breach_date.strftime, breach %>
-          </h3>
-          <p><%= breach.description %></p>
-          <p><%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %></p>
+          <%= render partial: "breaches/abstract", locals: {breach: breach} %>
         <% end %>
 
       </div>

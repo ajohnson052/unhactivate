@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @breaches = current_user.breaches.order(breach_date: :desc)
   end
 
   def select_categories

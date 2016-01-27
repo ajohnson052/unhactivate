@@ -13,10 +13,17 @@
 </div>
 
 
-<h1> Your Unhactivate Feed</h1>
+<div class="col-md-6">
+  <h1> Your Unhactivate Feed</h1>
 
-<div class="col-md-4">
-
+  <% @breaches.each do |breach| %>
+    <h3>
+      <%= link_to breach.title + ', ' + breach.breach_date.strftime, breach %>
+    </h3>
+    <p><%= breach.description %></p>
+    <p><%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %></p>
+  <% end %>
+<!--
 <h2> Company Breached!</h2>
   <p>
 
@@ -35,6 +42,6 @@
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
 
-    </p>
+    </p> -->
 
 </div>

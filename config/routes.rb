@@ -1,21 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'breaches/new'
-
-  get 'breaches/create'
-
-  get 'breaches/new'
-
-  get 'breaches/create'
-
-  get 'breaches/new'
-
-  get 'breaches/create'
-
-  get "/select_categories" => "users#select_categories"
-
   resources :breaches
-  resources :organizations # we may not need this
+  resources :organizations, only: [:show, :index]
+  resources :articles, only: [:show, :index]
 
   devise_for :users, controllers: {registrations: "registrations"}
   resources :users, only: [:show] do
@@ -27,6 +14,12 @@ Rails.application.routes.draw do
   end
 
   root to: "welcome#index"
+
+  get 'about' => 'welcome#about'
+  get 'legal' => 'welcome#legal'
+  get 'support' => 'welcome#support'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,11 +1,2 @@
-
-<h3><%= @breach.title %></h3>
-<p>
-  <b>Breach date:</b>
-  <%= @breach.breach_date %>
-</p>
-<p>
-  <b>description:</b>
-  <%= @breach.description %>
-</p>
-<%= link_to 'Back', breaches_path %>
+<%= render partial: "full_details", locals: {breach: @breach}  %>
+<%= link_to 'Back', _back_url() %>

@@ -23,21 +23,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img alt="logo"></a>
+          <a class="navbar-brand" href="root_path">
+            <%= link_to image_tag("logo.png"), root_path %>
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <%= nav_li "Unhactivate", root_path %></li>
             <%= nav_li "Breaches", breaches_path %>
-            <%= nav_li "Educate", "/educate" %>
+            <%= nav_li "Educate", articles_path %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
               <div class="log-in-bar">
                 <% if current_user %>
-                  <%= link_to current_user.email, user_path(current_user) %>
+                  <%= current_user.email %>
                   <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
                 <% else %>
                   <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form"}) do |f| %>
@@ -69,17 +70,15 @@
     <p class="alert"><%= alert %></p>
 
   </header>
-
-<div class=".">
-  <%= yield %>
-</div>
-
+  <main class="container">
+    <%= yield %>
+  </main>
   <footer>
-    <ul class="navbar navbar-default navbar-fixed-bottom">
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/support">Support</a></li>
-      <li><a href="/legal">Legal</a></li>
-    </ul>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <%= link_to "About Us", about_path %>
+      <%= link_to "Support", support_path %>
+      <%= link_to "Legal", legal_path %>
+    </div>
   </footer>
 
 </body>

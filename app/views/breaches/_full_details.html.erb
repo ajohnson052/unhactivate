@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <%= breach.title %>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <h4><%= breach.breach_date.strftime %></h4>
+    <p><%= simple_format(breach.description) %></p>
+    <p><%= link_to breach.organization.name, breach.organization %> was the target of this security breach.</p>
+    <p>This is categorized under <%= link_to breach.organization.category.title, breach.organization %>.</p>
+  </div>
+</div>

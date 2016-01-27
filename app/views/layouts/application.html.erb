@@ -34,6 +34,7 @@
             <%= nav_li "Breaches", breaches_path %>
             <%= nav_li "Educate", "/educate" %>
           </ul>
+<<<<<<< HEAD
           <ul class="nav navbar-nav navbar-right">
             <li>
               <div class="log-in-bar">
@@ -53,6 +54,23 @@
               </div>
             </li>
           </ul>
+=======
+          <div class="log-in-bar navbar-right">
+            <% if current_user %>
+              <%= link_to current_user.email, user_path(current_user) %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form"}) do |f| %>
+                <%= f.text_field :email, placeholder: "Email"%>
+                <%= f.password_field :password, placeholder: "Password" %>
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+                <%= f.submit 'Log in', html: {class: "btn btn-default"} %>
+                <!-- <%= link_to "Forgot your password?", new_password_path(:user) %> -->
+              <% end %>
+            <% end %>
+          </div>
+>>>>>>> 68592dd71ccafbf53a0677f95faf7595834602dc
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>

@@ -1,4 +1,53 @@
-<h2>Hello <%= current_user.email %> </h2>
-<% current_user.organizations.each do |org|%>
-  <%= org.name %>
-<% end %>
+<h1> My profile</h1>
+<h2><%= current_user.email %> </h2>
+
+
+<div class="col-md-3">
+  <h2>My Accounts</h2>
+  <ul>
+    <% current_user.organizations.each do |org|%>
+      <li>
+        <%= org.name %>
+      </li>
+    <% end %>
+  </ul>
+  <% params = {} %>
+  <% @categories.each do |category| %>
+    <% params[category.title] = "1" %>
+  <% end %>
+  <%= link_to "Add more", select_organizations_user_path(current_user, params: params) %>
+</div>
+
+
+<div class="col-md-6">
+  <h1> Your Unhactivate Feed</h1>
+
+  <% @breaches.each do |breach| %>
+    <h3>
+      <%= link_to breach.title + ', ' + breach.breach_date.strftime, breach %>
+    </h3>
+    <p><%= breach.description %></p>
+    <p><%= link_to 'Target: ' + breach.organization.name + ' (' + breach.organization.category.title + ')', breach.organization %></p>
+  <% end %>
+<!--
+<h2> Company Breached!</h2>
+  <p>
+
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+
+  </p>
+
+<h2> Article Title</h2>
+    <p>
+
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+
+    </p>
+
+<h2> Article Title</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+
+    </p> -->
+
+</div>

@@ -1,12 +1,10 @@
 <div>
   <h2>Sign Up Today</h2>
-  <p>Get notified the moment a breach has occured.</p>
-  <p><%= resource_name %></p>
+  <h4>Get notified the moment a breach has occured.</h4>
   <div class = "sign-up">
-    <h2>Sign up</h2>
-
+    <%= devise_error_messages! %>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+
 
       <div class="field">
         <%= f.label :email %><br />

@@ -5,6 +5,9 @@ class BreachesController < ApplicationController
     @breaches = Breach.order(breach_date: :desc)
   end
 
+  def show
+  end
+
   def new
     @breach = Breach.new
     @orgs = Organization.all

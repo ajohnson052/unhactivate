@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         current_user.organizations.push(org)
       end
     end
-    render 'show'
+    redirect_to user_path(current_user)
   end
 
   def show

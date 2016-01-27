@@ -1,5 +1,5 @@
 class BreachesController < ApplicationController
-  before_action :set_breach, only: [:show]
+  before_action :set_breach, only: [:show, :edit]
 
   def index
     @breaches = Breach.order(breach_date: :desc)

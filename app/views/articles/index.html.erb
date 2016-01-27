@@ -2,8 +2,6 @@
 
 <% @articles.each do |article| %>
 
-  <h3><%= article.title %></h3>
+  <%= render partial: "teaser", locals: {article: article} %>
 
-  <div><%= simple_format(article.body) %></div>
-
-<% end %> 
+<% end %>

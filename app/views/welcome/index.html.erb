@@ -39,11 +39,9 @@
 
           <% @articles.each do |article| %>
 
-            <h3><%= article.title %></h3>
+            <%= render partial: "articles/teaser", locals: {article: article} %>
 
-            <div><%= simple_format(article.body) %></div>
-
-          <% end %>  
+          <% end %>
 
       <% if current_user.try(:admin?) %>
         <div class="admin">

@@ -73,10 +73,10 @@
 <%= yield %>
 
   <footer>
-    <ul class="navbar navbar-default navbar-fixed-bottom">
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/support">Support</a></li>
-      <li><a href="/legal">Legal</a></li>
+    <ul class="nav navbar-nav navbar-default navbar-fixed-bottom">
+      <%= nav_li "About Us", about_path %></li>
+      <%= nav_li "Support", support_path %>
+      <%= nav_li "Legal", legal_path %>
     </ul>
   </footer>
 

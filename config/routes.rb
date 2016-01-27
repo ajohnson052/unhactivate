@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
+  get 'breaches/new'
+
+  get 'breaches/create'
+
+  get 'breaches/new'
+
+  get 'breaches/create'
+
+  get 'breaches/new'
+
+  get 'breaches/create'
+
   get "/select_categories" => "users#select_categories"
 
   resources :breaches

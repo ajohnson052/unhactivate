@@ -17,11 +17,11 @@ class BreachesController < ApplicationController
     respond_to do |format|
       if @breach.save
         format.html { redirect_to @breach, notice: 'Breach was successfully created.' }
-        format.json { render :show, status: :created, location: @breach }
+        # format.json { render :show, status: :created, location: @breach }
         @breach.notify
       else
         format.html { render :new }
-        format.json { render json: @breach.errors, status: :unprocessable_entity }
+        # format.json { render json: @breach.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -34,10 +34,10 @@ class BreachesController < ApplicationController
     respond_to do |format|
       if @breach.update(breach_params)
         format.html { redirect_to @breach, notice: 'Breach was successfully updated.' }
-        format.json { render :show, status: :ok, location: @breach }
+        # format.json { render :show, status: :ok, location: @breach }
       else
         format.html { render :edit }
-        format.json { render json: @breach.errors, status: :unprocessable_entity }
+        # format.json { render json: @breach.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -50,13 +50,6 @@ Article.delete_all
 #
 # end
 
-# file_name = File.expand_path(File.join(File.dirname(__FILE__), 'articles.json'))
-# articles = JSON.parse(File.read(file_name))
-
-# articles.each do |i|
-#   Article.create(title: i["Title"], body: i["Body"])
-# end
-
 
 file_name = File.expand_path(File.join(File.dirname(__FILE__), 'companies_categories_Jan28.json'))
 companies = JSON.parse(File.read(file_name))
@@ -71,7 +64,7 @@ companies.each do |company|
 
   cat.organizations.create(
     domain: company["Company"].downcase + '.com',
-    name: company["Company"]
+    name: company["Company"].strip
     )
 
 end
@@ -202,4 +195,88 @@ Article.create(
   <p>Don&#39;t assume that now that you&#39;ve developed a strong password you should use it for every system or program you log into. If an attacker does guess it, he would have access to all of your accounts. You should use these techniques to develop unique passwords for each of your accounts.</p>
 
   <p>Here is a review of tactics to use when choosing a password:</p>"
+)
+
+opm = Organization.find_by(name: "Office of Personnel Management (OPM)")
+
+opm.breaches.create(
+  title: "OPM",
+  breach_date: "2015-06-15",
+  description: "<p><strong>What was compromised: </strong></p>
+
+  <p>Information targeted in the breach included personally identifiable information such as Social Security numbers, as well as names, dates and places of birth, and addresses.</p>
+
+  <p>The hack went deeper than initially believed and likely involved theft of detailed security-clearance-related background information, possibly even including biometric data.</p>
+
+  <p><strong>Actions to take:</strong></p>
+
+  <ul>
+   <li>Check your credit report at Credit Karma.</li>
+   <li>Look for accounts or charges you don&rsquo;t recognize. Even if the breach didn&rsquo;t involve credit card information, the thieves may use your Social Security number, address and date of birth to open accounts in your name.</li>
+   <li>OPM announced that it plans to offer credit report access, credit monitoring, and identity theft insurance and recovery services to potentially affected individuals. Take advantage of this offer.</li>
+   <li>Place a fraud alert on your credit reports. With a fraud alert, businesses must verify your identity before providing new credit. An initial fraud alert lasts 90 days but you can renew it.</li>
+  </ul>"
+)
+
+centene = Organization.find_by(name: "Centene Corp")
+
+centene.breaches.create(
+  title: "Centene Corp.",
+  breach_date: "2016-01-26",
+  description: "<p>Health insurer Centene announced today that six hard drives containing personal information on almost one million customers have been lost.</p>
+
+  <p><strong>What was compromised: </strong></p>
+
+  <p>The lost hard drives included data such as enrollees&#39; names, addresses, birth dates, Social Security numbers, Centene ID numbers and other health information.</p>
+
+  <p><strong>Actions to take:</strong></p>
+
+  <ul>
+   <li>Check your credit report at Credit Karma.</li>
+   <li>Utilize any free identification monitoring services Centene decides to offer.</li>
+   <li>Look for accounts or charges you don&rsquo;t recognize. Even if the breach didn&rsquo;t involve credit card information, the thieves may use your Social Security number, address and date of birth to open accounts in your name.</li>
+   <li>Place a fraud alert on your credit reports. With a fraud alert, businesses must verify your identity before providing new credit. An initial fraud alert lasts 90 days but you can renew it.&nbsp;</li>
+  </ul>"
+)
+
+blue_shield = Organization.find_by(name: "Blue Shield of California")
+
+blue_shield.breaches.create(
+  title: "Blue Cross of California",
+  breach_date: "2016-01-14",
+  description: "<p>January 14, 2016</p>
+
+  <p>Blue Shield of California says the personal information of almost 21,000 people who enrolled in coverage between October 2013 and December 2015 may have been exposed as a result of a data breach at a third-party vendor.</p>
+
+  <p><strong>What was compromised: </strong></p>
+
+  <p>The information potentially exposed includes names, addresses, birthdates and Social Security numbers of customers. This was allegedly the result of log-in credentials for certain Blue Shield customer service representatives being misused.</p>
+
+  <p><strong>Actions to take:</strong></p>
+
+  <ul>
+   <li>Check your credit report at Credit Karma.</li>
+   <li>Utilize Blue Cross&rsquo;s offer of a free one-year membership in Experian&#39;s ProtectMyID Alert service if you have been affected.</li>
+   <li>Look for accounts or charges you don&rsquo;t recognize. Even if the breach didn&rsquo;t involve credit card information, the thieves may use your Social Security number, address and date of birth to open accounts in your name.</li>
+   <li>Place a fraud alert on your credit reports. With a fraud alert, businesses must verify your identity before providing new credit. An initial fraud alert lasts 90 days but you can renew it.&nbsp;</li>
+  </ul>"
+)
+
+time_warner = Organization.find_by(name: "Time Warner")
+
+time_warner.breaches.create(
+  title: "Time Warner Cable",
+  breach_date: "2016-01-07",
+  description: "<p><strong>What was compromised: </strong></p>
+
+  <p>Email and password information of customers were likely obtained through downloaded malware during a phishing attack or indirectly through data breaches of other companies that stored Time Warner Cable customer information.</p>
+
+  <p><strong>Actions to take:</strong></p>
+
+  <ul>
+   <li>Check your credit report at Credit Karma.</li>
+   <li>Utilize Blue Cross&rsquo;s offer of a free one-year membership in Experian&#39;s ProtectMyID Alert service if you have been affected.</li>
+   <li>Look for accounts or charges you don&rsquo;t recognize. Even if the breach didn&rsquo;t involve credit card information, the thieves may use your Social Security number, address and date of birth to open accounts in your name.</li>
+   <li>Place a fraud alert on your credit reports. With a fraud alert, businesses must verify your identity before providing new credit. An initial fraud alert lasts 90 days but you can renew it.</li>
+  </ul>"
 )

@@ -2,10 +2,12 @@
 
   <div class="col-md-6">
 
-    <div>
-      <h2>Monitor Breaches That Might Affect You</h2>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Monitor Breaches That Might Affect You</h2>
+      </div>
 
-      <div class="input-group">
+      <div class="input-group panel-body">
         <input type="text" class="form-control" placeholder="Search for breaches">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">Doesn't Work</button>
@@ -27,15 +29,25 @@
 
   <div class="col-md-6">
 
-    <%= render partial: "devise/registrations/signup" if not current_user %>
+    <div class="well well-lg">
+      <%= render partial: "devise/registrations/signup" if not current_user %>
+    </div>
 
-      <h2>Learn How to Protect Your Information</h2>
+    <div class="panel panel-info">
 
+      <div class="panel-heading">
+        <h2 class="panel-title">Learn How to Protect Your Information</h2>
+      </div>
+
+      <div class="panel-body">
         <% @articles.each do |article| %>
 
           <%= render partial: "articles/teaser", locals: {article: article} %>
 
         <% end %>
+      </div>
+
+    </div>
 
     <% if current_user.try(:admin?) %>
       <div class="admin">

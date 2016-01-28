@@ -35,7 +35,9 @@
 
           <% @articles.each do |article| %>
 
-            <%= render partial: "articles/teaser", locals: {article: article} %>
+            <h3><%= link_to article.title, article_path(article) %></h3>
+
+            <div><%= simple_format(article.body.truncate_words(50)) %></div>
 
           <% end %>
 

@@ -14,23 +14,15 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 .navbar {
   background-color: #34C7ED;
 }
 
-footer {
-background-color: red;
-}
-
-#bottom {
-  text-align: left;
-}
-
 body {
- padding-bottom: 70px;
+  padding-bottom: 70px; // added for fixed navbar overlay issue
 }
 
 .terms-link {

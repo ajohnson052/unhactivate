@@ -1,55 +1,51 @@
-<div>
+<row>
 
-  <row>
+  <div class="col-md-6">
 
-    <div class="col-md-6">
+    <div>
+      <h2>Monitor Breaches That Might Affect You</h2>
 
-      <div>
-        <h2>Monitor Breaches That Might Affect You</h2>
-
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for breaches">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Doesn't Work</button>
-          </span>
-        </div><!-- /input-group -->
-
-      </div>
-
-      <div>
-        <h2>Recent Breaches</h2>
-
-        <% @recent_breaches.each do |breach| %>
-          <%= render partial: "breaches/abstract", locals: {breach: breach} %>
-        <% end %>
-
-      </div>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for breaches">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Doesn't Work</button>
+        </span>
+      </div><!-- /input-group -->
 
     </div>
 
-    <div class="col-md-6">
+    <div>
+      <h2>Recent Breaches</h2>
 
-      <%= render partial: "devise/registrations/signup" if not current_user %>
-
-        <h2>Learn How to Protect Your Information</h2>
-
-          <% @articles.each do |article| %>
-
-            <%= render partial: "articles/teaser", locals: {article: article} %>
-
-          <% end %>
-
-      <% if current_user.try(:admin?) %>
-        <div class="admin">
-          <h3>'ello, Gov'na!</h3>
-
-          <p><%= link_to 'You can input new security breaches into the system!', new_breach_path %></p>
-
-        </div>
+      <% @recent_breaches.each do |breach| %>
+        <%= render partial: "breaches/abstract", locals: {breach: breach} %>
       <% end %>
 
     </div>
 
-  </row>
+  </div>
 
-</div>
+  <div class="col-md-6">
+
+    <%= render partial: "devise/registrations/signup" if not current_user %>
+
+      <h2>Learn How to Protect Your Information</h2>
+
+        <% @articles.each do |article| %>
+
+          <%= render partial: "articles/teaser", locals: {article: article} %>
+
+        <% end %>
+
+    <% if current_user.try(:admin?) %>
+      <div class="admin">
+        <h3>'ello, Gov'na!</h3>
+
+        <p><%= link_to 'You can input new security breaches into the system!', new_breach_path %></p>
+
+      </div>
+    <% end %>
+
+  </div>
+
+</row>

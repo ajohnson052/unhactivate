@@ -14,26 +14,45 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 .navbar {
   background-color: #34C7ED;
 }
 
-footer {
-background-color: red;
-}
-
-#bottom {
-  text-align: left;
-}
-
-body {
- padding-bottom: 70px;
-}
+// body { // FIXME don't think we need this anymore
+//   padding-bottom: 70px; // added for fixed navbar overlay issue
+// }
 
 .terms-link {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.panel-primary > .panel-heading {
+  background-color: #912105;
+}
+
+.panel-primary{
+  border-color: #912105;
+}
+
+.panel-info > .panel-heading {
+  background-color: #307221;
+  color: #fff;
+}
+
+.panel-info{
+  border-color: #307221;
+}
+
+.navbar-fixed-top .navbar-nav li > a {
+    color: #912105;
+    font-size: 2rem;
+}
+
+.navbar-form > .btn {
+    color: #fff;
+    background: #307221;
 }

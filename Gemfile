@@ -33,6 +33,8 @@ gem 'figaro'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+#SMS/texting provider
+gem 'twilio-ruby'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

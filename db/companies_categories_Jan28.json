@@ -1,0 +1,550 @@
+[
+  {
+    "Category":"Entertainment & News",
+    "Company":"News Corp. "
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"Walt Disney  "
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"Netflix"
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"Amazon.com "
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"Hulu"
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"Google "
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"DirecTV Group "
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"New York Times"
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"Fox"
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"NBC"
+  },
+  {
+    "Category":"Entertainment & News",
+    "Company":"CNN"
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Accenture "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Allstate "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"American Express "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Bank of America Corp. "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Bank of Montreal "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Bank of Nova Scotia "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Barclays "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Berkshire Hathaway "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Cathay Life Insurance "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Cigna "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Citigroup "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Credit Suisse "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Deutsche Bank "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Fannie Mae "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"GMAC "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Goldman Sachs Group "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"HSBC Holdings "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"ING Group "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"J.P. Morgan Chase & Co. "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Liberty Mutual Insurance Group "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Massachusetts Mutual Life Insurance "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"MetLife "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Morgan Stanley "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"National Australia Bank "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Nationwide "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"New York Life Insurance "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Northwestern Mutual "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Royal Bank of Canada "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Royal Bank of Scotland "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"State Farm Insurance Cos. "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"UBS "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Wells Fargo "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Westpac Banking "
+  },
+  {
+    "Category":"Finance & Insurance",
+    "Company":"Paypal"
+  },
+  {
+    "Category":"Government",
+    "Company":"U.S. Postal Service "
+  },
+  {
+    "Category":"Government",
+    "Company":"Office of Personnel Management (OPM)"
+  },
+  {
+    "Category":"Government",
+    "Company":"Voting Records - Federal & State"
+  },
+  {
+    "Category":"Health",
+    "Company":"CVS Caremark "
+  },
+  {
+    "Category":"Health",
+    "Company":"Rite Aid "
+  },
+  {
+    "Category":"Health",
+    "Company":"UnitedHealth Group "
+  },
+  {
+    "Category":"Health",
+    "Company":"Walgreen "
+  },
+  {
+    "Category":"Health",
+    "Company":"CareFirst"
+  },
+  {
+    "Category":"Health",
+    "Company":"Kaiser "
+  },
+  {
+    "Category":"Health",
+    "Company":"Anthem"
+  },
+  {
+    "Category":"Health",
+    "Company":"Aetna  "
+  },
+  {
+    "Category":"Health",
+    "Company":"Humana  "
+  },
+  {
+    "Category":"Health",
+    "Company":"HCSC  "
+  },
+  {
+    "Category":"Health",
+    "Company":"Cigna Health  "
+  },
+  {
+    "Category":"Health",
+    "Company":"Highmark  "
+  },
+  {
+    "Category":"Health",
+    "Company":"Blue Shield of California "
+  },
+  {
+    "Category":"Health",
+    "Company":"Independence Blue Cross "
+  },
+  {
+    "Category":"Health",
+    "Company":"Centene Corp "
+  },
+  {
+    "Category":"Health",
+    "Company":"HIP Insurance"
+  },
+  {
+    "Category":"Health",
+    "Company":"BCBS of New Jersey  "
+  },
+  {
+    "Category":"Health",
+    "Company":"BCBS of Michigan"
+  },
+  {
+    "Category":"Health",
+    "Company":"Guidewell Mutual Holdings"
+  },
+  {
+    "Category":"Health",
+    "Company":"California Physicians’ Service  "
+  },
+  {
+    "Category":"Health",
+    "Company":"Wellcare"
+  },
+  {
+    "Category":"Health",
+    "Company":"Carefirst"
+  },
+  {
+    "Category":"Retail",
+    "Company":"Amazon.com "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Apple "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Best Buy "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Carrefour "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Costco Wholesale "
+  },
+  {
+    "Category":"Retail",
+    "Company":"CVS Caremark "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Home Depot "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Lowe's "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Publix Super Markets "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Safeway "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Sears"
+  },
+  {
+    "Category":"Retail",
+    "Company":"Staples "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Target "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Walgreen "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Wal-Mart Stores "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Woolworths "
+  },
+  {
+    "Category":"Retail",
+    "Company":"Zappos"
+  },
+  {
+    "Category":"Retail",
+    "Company":"Gilt Group"
+  },
+  {
+    "Category":"Retail",
+    "Company":"Ebay"
+  },
+  {
+    "Category":"Shipping",
+    "Company":"Deutsche Post "
+  },
+  {
+    "Category":"Shipping",
+    "Company":"FedEx "
+  },
+  {
+    "Category":"Shipping",
+    "Company":"U.S. Postal Service "
+  },
+  {
+    "Category":"Shipping",
+    "Company":"UPS"
+  },
+  {
+    "Category":"Shipping",
+    "Company":"DHL"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Google "
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Twitter"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Facebook"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Instagram"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"LinkedIn"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Pinterest"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Yelp"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Meetup"
+  },
+  {
+    "Category":"Social Media",
+    "Company":"Yahoo (including Flickr)"
+  },
+  {
+    "Category":"Tech",
+    "Company":"Amazon.com "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Apple "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Canon "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Cisco Systems "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Dell "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Google "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Intel "
+  },
+  {
+    "Category":"Tech",
+    "Company":"IBM"
+  },
+  {
+    "Category":"Tech",
+    "Company":"Microsoft "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Oracle "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Sony "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Toshiba "
+  },
+  {
+    "Category":"Tech",
+    "Company":"Paypal"
+  },
+  {
+    "Category":"Tech",
+    "Company":"Yahoo (including Flikr)"
+  },
+  {
+    "Category":"Tech",
+    "Company":"Ebay"
+  },
+  {
+    "Category":"Telecom",
+    "Company":"AT&T "
+  },
+  {
+    "Category":"Telecom",
+    "Company":"Comcast "
+  },
+  {
+    "Category":"Telecom",
+    "Company":"Deutsche Telekom "
+  },
+  {
+    "Category":"Telecom",
+    "Company":"France Télécom "
+  },
+  {
+    "Category":"Telecom",
+    "Company":"Time Warner "
+  },
+  {
+    "Category":"Telecom",
+    "Company":"Verizon Communications "
+  },
+  {
+    "Category":"Telecom",
+    "Company":"Vodafone "
+  },
+  {
+    "Category":"Travel",
+    "Company":"Air France-KLM Group "
+  },
+  {
+    "Category":"Travel",
+    "Company":"Continental "
+  },
+  {
+    "Category":"Travel",
+    "Company":"Delta Air Lines "
+  },
+  {
+    "Category":"Travel",
+    "Company":"Japan Airlines "
+  },
+  {
+    "Category":"Travel",
+    "Company":"Lufthansa Group "
+  },
+  {
+    "Category":"Travel",
+    "Company":"United Airlines"
+  },
+  {
+    "Category":"Travel",
+    "Company":"Priceline"
+  },
+  {
+    "Category":"Travel",
+    "Company":"Kayak"
+  },
+  {
+    "Category":"Travel",
+    "Company":"Expedia"
+  },
+  {
+    "Category":"Travel",
+    "Company":"Southwest"
+  },
+  {
+    "Category":"Travel",
+    "Company":"JetBlue"
+  },
+  {
+    "Category":"Travel",
+    "Company":"Virgin"
+  }
+]

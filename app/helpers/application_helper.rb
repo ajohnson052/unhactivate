@@ -22,4 +22,8 @@ module ApplicationHelper
     end
   end
 
+  def abstract(long_text)
+    Nokogiri::HTML.parse(long_text).css('p')[1].text
+  end
+
 end

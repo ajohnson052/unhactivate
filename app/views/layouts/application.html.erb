@@ -41,10 +41,10 @@
                 <% else %>
                   <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form"}) do |f| %>
                     <%= f.text_field :email, placeholder: "Email"%>
-                    <%= f.password_field :password, placeholder: "Password" %></br>
+                    <%= f.password_field :password, placeholder: "Password" %>
+                    <%= f.submit 'Log in', class: "btn btn-default" %></br>
                     <%= f.check_box :remember_me %>
                     <%= f.label :remember_me %>
-                    <%= f.submit 'Log in', class: "btn btn-default" %>
                     <!-- <%= link_to "Forgot your password?", new_password_path(:user) %> -->
                   <% end %>
                 <% end %>

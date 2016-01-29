@@ -5,6 +5,7 @@
     </h3>
   </div>
   <div class="panel-body">
-    <div><%= simple_format(article.body.truncate_words(50)) %></div>
+    <!-- <div><%= simple_format(article.body.truncate_words(50)) %></div> -->
+    <div><%= abstract(simple_format(article.body)).truncate_words(40) %> <%= link_to "read more", article_path(article) %></div>
   </div>
 </div>

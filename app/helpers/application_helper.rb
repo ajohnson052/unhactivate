@@ -23,7 +23,11 @@ module ApplicationHelper
   end
 
   def abstract(long_text)
-    Nokogiri::HTML.parse(long_text).css('p')[1].text
+    # so, so hacky FIXME
+    abstract = Nokogiri::HTML.parse(long_text).css('p')[1]
+    # return long_text if abstract is nil
+    if abstract then return abstract.text
+    else return long_text end
   end
 
 end

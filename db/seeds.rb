@@ -202,7 +202,9 @@ opm = Organization.find_by(name: "Office of Personnel Management (OPM)")
 opm.breaches.create(
   title: "OPM",
   breach_date: "2015-06-15",
-  description: "<p><strong>What was compromised: </strong></p>
+  description: "<p>The United States Office of Personnel Management (OPM) announced today that it has suffered a massive data breach in which the records of more than 22 million individuals were compromised.</p>
+
+  <p><strong>What was compromised: </strong></p>
 
   <p>Information targeted in the breach included personally identifiable information such as Social Security numbers, as well as names, dates and places of birth, and addresses.</p>
 
@@ -244,9 +246,7 @@ blue_shield = Organization.find_by(name: "Blue Shield of California")
 blue_shield.breaches.create(
   title: "Blue Cross of California",
   breach_date: "2016-01-14",
-  description: "<p>January 14, 2016</p>
-
-  <p>Blue Shield of California says the personal information of almost 21,000 people who enrolled in coverage between October 2013 and December 2015 may have been exposed as a result of a data breach at a third-party vendor.</p>
+  description: "<p>Blue Shield of California says the personal information of almost 21,000 people who enrolled in coverage between October 2013 and December 2015 may have been exposed as a result of a data breach at a third-party vendor.</p>
 
   <p><strong>What was compromised: </strong></p>
 
@@ -267,7 +267,9 @@ time_warner = Organization.find_by(name: "Time Warner")
 time_warner.breaches.create(
   title: "Time Warner Cable",
   breach_date: "2016-01-07",
-  description: "<p><strong>What was compromised: </strong></p>
+  description: "<p>320,000 Time Warner Cable customers could be affected in a security breach announced recently by the company</p>
+
+  <p><strong>What was compromised: </strong></p>
 
   <p>Email and password information of customers were likely obtained through downloaded malware during a phishing attack or indirectly through data breaches of other companies that stored Time Warner Cable customer information.</p>
 

@@ -1,4 +1,4 @@
-<%= form_tag("/users/#{current_user.id}/select_organizations", method: "get") do %>
+<%= form_tag(select_organizations_user_path(current_user), method: "get") do %>
   <% @categories.each do |category| %>
     <% title = category.title %>
     <%= label_tag(title, title) %>

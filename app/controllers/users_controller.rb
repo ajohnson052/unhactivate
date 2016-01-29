@@ -1,12 +1,18 @@
 class UsersController < ApplicationController
 
-  def interests
+  def add_interests
     organizations = Organization.all
     organizations.each do |org|
       if params[org.name] then
         current_user.organizations.push(org)
       end
     end
+    redirect_to user_path(current_user)
+  end
+
+  def remove_interest
+    interest = current_user.interests.find_by(organization_id: params[:org])
+    interest.destroy
     redirect_to user_path(current_user)
   end
 

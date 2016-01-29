@@ -17,7 +17,7 @@
       <ul>
         <% current_user.organizations.each do |org|%>
           <li>
-            <%= org.name %>
+            <%= org.name %></br>
             <%= link_to "Remove", interest_user_path(current_user, org: org.id), method: :delete %>
           </li>
         <% end %>

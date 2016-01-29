@@ -22,6 +22,10 @@ $grid-float-breakpoint: 900px;
   background-color: #34C7ED;
 }
 
+.navbar-nav > li > a {
+  line-height: 40px;
+}
+
 body {
   padding-bottom: 70px; // added for fixed navbar overlay issue
   padding-top: 70px; // added for fixed navbar overlay issue

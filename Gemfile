@@ -33,6 +33,8 @@ gem 'figaro'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'nokogiri' # just used to create fake abstracts from first paragraph of text
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -53,6 +55,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'pry'
 end
 
 group :production do

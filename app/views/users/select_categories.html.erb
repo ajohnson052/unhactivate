@@ -1,8 +1,10 @@
 <%= form_tag(select_organizations_user_path(current_user), method: "get") do %>
+<h3>Please select the categories of companies that you are interested in monitoring</h3>
   <% @categories.each do |category| %>
     <% title = category.title %>
-    <%= label_tag(title, title) %>
     <%= check_box_tag(title) %>
+    <%= label_tag(title, title) %>
+  </br>
   <% end %>
   <%= submit_tag("Next") %>
 <% end %>

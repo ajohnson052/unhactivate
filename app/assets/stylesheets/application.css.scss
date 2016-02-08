@@ -14,11 +14,16 @@
  *= require_self
  */
 
+$grid-float-breakpoint: 900px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .navbar {
   background-color: #34C7ED;
+}
+
+.navbar-nav > li > a {
+  line-height: 40px;
 }
 
 body {

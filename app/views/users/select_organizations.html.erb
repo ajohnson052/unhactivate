@@ -1,4 +1,4 @@
-<%= form_tag("/users/#{current_user.id}/interests", method: "post") do %>
+<%= form_tag(interests_user_path(current_user), method: "post") do %>
   <% @interests.each do |interest| %>
     <h2><%= interest.title %></h2>
     <% interest.organizations.each do |org| %>

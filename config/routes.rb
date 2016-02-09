@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'legal' => 'welcome#legal'
   get 'support' => 'welcome#support'
 
+  post '/' => 'welcome#support_thankyou'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

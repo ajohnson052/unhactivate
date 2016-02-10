@@ -3,6 +3,34 @@
 <div class="panel panel-default">
   <div class="panel-body">
 
+    <!-- dead-end placeholder form -->
+    <form action="/support" id="support_form" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <fieldset class="form-group row">
+        <label for="email" class="col-sm-2 form-control-label">your email</label>
+        <div class="col-sm-10">
+          <input name="email" id="email" class="form-control" placeholder="username@example.com"></input>
+          <small class="text-muted">We'll only use this email to respond to your issue.</small>
+        </div>
+      </fieldset>
+      <fieldset class="form-group row">
+        <label for="support_category" class="col-sm-2 form-control-label">type of support question</label>
+        <div class="col-sm-10">
+          <select name="support_category" id="support_category" class="form-control">
+            <option value="account">I have an issue with my unhactivate account</option>
+            <option value="correction">I believe there's an error in unhactivate's data/content</option>
+            <option value="bug">I'm having trouble using an unhactivate feature</option>
+            <option value="suggestion">I have a suggestion for an unhactivate feature</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="exampleTextarea">Your question or comment</label>
+        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
   </div>
 </div>
 

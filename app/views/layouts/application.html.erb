@@ -32,25 +32,30 @@
             <%= nav_li "Breaches", breaches_path %>
             <%= nav_li "Educate", articles_path %>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <div class="log-in-bar">
-                <% if current_user %>
-                  <%= link_to current_user.email, user_path(current_user) %></br>
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-                <% else %>
-                  <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form"}) do |f| %>
-                    <%= f.text_field :email, placeholder: "Email"%>
-                    <%= f.password_field :password, placeholder: "Password" %>
-                    <%= f.submit 'Log in', class: "btn btn-default" %></br>
-                    <%= f.check_box :remember_me %>
-                    <%= f.label :remember_me %>
-                    <!-- <%= link_to "Forgot your password?", new_password_path(:user) %> -->
-                  <% end %>
+          <% if current_user %>
+            <ul class="nav navbar-nav navbar-right logged-in-bar">
+              <li>
+                <%= link_to user_path(current_user) do %>
+                  <span title="account" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                  <!-- <%= current_user.email %> -->
                 <% end %>
-              </div>
-            </li>
-          </ul>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <span title="log out" class="glyphicon glyphicon-log-out" aria-hidden="true" aria-label="log out"></span>
+                <% end %>
+              </li>
+            </ul>
+          <% else %>
+            <%= form_for(:user, url: session_path(:user), html: {class: "navbar-form navbar-right"}) do |f| %>
+              <%= f.text_field :email, placeholder: "Email"%>
+              <%= f.password_field :password, placeholder: "Password" %>
+              <%= f.submit 'Log in', class: "btn btn-default" %></br>
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+              <!-- <%= link_to "Forgot your password?", new_password_path(:user) %> -->
+            <% end %>
+          <% end %>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>

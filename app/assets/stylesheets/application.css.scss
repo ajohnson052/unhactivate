@@ -96,10 +96,11 @@ body {
   color: #f5f5f5;
 }
 
-.log-in-bar > a {
-  color: #f5f5f5;
+.logged-in-bar span, .logged-in-bar a, logged-in-bar li {
+  color: white;
+  background: green;
 }
-
-.log-in-bar {
-  text-align: right;
+.logged-in-bar li:hover, .logged-in-bar li:hover a  {
+  color: gray;
+  background: #307221;
 }
